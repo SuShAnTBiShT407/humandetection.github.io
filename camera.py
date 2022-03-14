@@ -1,4 +1,4 @@
-import re
+
 import cv2
 human_cascade = cv2.CascadeClassifier('haarcascade_fullbody.xml')
 class VideoCamera(object):

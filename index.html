@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Human Detection </title>
 </head>
-<title>
-    <?PHP
-        echo shell_exec("python main.py");
-        ?>
-</title>
 <body>
     <h1>Main page</h1>
+    <form method="get" action="main.py">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form>
     
     
 </body>

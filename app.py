@@ -2,7 +2,11 @@ from flask import Flask, render_template, Response
 import cv2
 from flask_socketio import SocketIO
 from camera import VideoCamera
+
+
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
 
 @app.route('/')
 def index():
@@ -24,4 +28,4 @@ def video_feed():
 
 if __name__=='__main__':    
     #app.run(host='https://humandetectionbypsb.herokuapp.com/',port='5000', debug=True)
-    SocketIO.run(app)
+    socketio.run(app)

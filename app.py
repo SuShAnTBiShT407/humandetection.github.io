@@ -27,5 +27,4 @@ def video_feed():
 
 
 if __name__=='__main__':    
-    #app.run(host='https://humandetectionbypsb.herokuapp.com/',port='5000', debug=True)
-    socketio.run(app)
+    socketio.run(app,debug=True)

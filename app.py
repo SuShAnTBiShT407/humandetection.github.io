@@ -2,7 +2,7 @@ from flask import Flask, render_template, Response
 import cv2
 from flask_socketio import SocketIO
 from camera import VideoCamera
-
+import streamlit
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
@@ -27,4 +27,4 @@ def video_feed():
 
 
 if __name__=='__main__':    
-    socketio.run(app,debug=True)
+    socketio.run(app)
